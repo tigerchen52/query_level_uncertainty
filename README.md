@@ -1,6 +1,6 @@
 # query_level_uncertainty
 
-This is the repo for our ongoing work "Query-Level Uncertainty in Large Language Models". Feel free to contact us if me missed any relevant papers or you would like to provide feedback. 
+This is the repo for our ongoing work "Query-Level Uncertainty in Large Language Models". Feel free to contact us if I missed any relevant papers or if you would like to provide feedback. 
 
 ## Internal Confidence
 The benefits of using our proposed internal confidence
