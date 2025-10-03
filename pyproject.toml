@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "query_level_uncertainty"
+description = "A pipeline to estiamate uncertainty without generating any tokens"
+version = "0.0.2"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ql_uncertainty"]
+
+[tool.setuptools]
+include = ["data/*.jsonl"]
+
+dependencies = [
+    "torch>=2.3.0",
+    "transformers>=4.49.0",
+]
+
+requires-python = ">= 3.10"
+
+authors = [
+  {name = "Lihu Chen"},
+]
+
+readme = "README.md"
+
+license = {text = "MIT License"}
+
+keywords = ["uncertainty estimation", "large language models", "knowledge boundary detection"]
+
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 4 - Beta",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+
+Homepage = "https://github.com/tigerchen52/query_level_uncertainty"
