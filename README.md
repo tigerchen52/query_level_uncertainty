@@ -20,7 +20,7 @@ Install our query-level uncertainty
 ```python
 pip install query-level-uncertainty
 ```
-Choose a uncertainty method to use
+Choose an uncertainty method to use
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
