@@ -1,5 +1,3 @@
-import os
-os.environ['TRANSFORMERS_CACHE'] = "/data/parietal/store3/soda/lihu/hf_model/"
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from ql_uncertainty import QLUncertainty
