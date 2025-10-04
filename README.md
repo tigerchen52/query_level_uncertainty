@@ -1,4 +1,7 @@
 # query_level_uncertainty
+[![Release](https://img.shields.io/pypi/v/pub-guard-llm?label=Release&style=flat-square)](https://pypi.org/project/query-level-uncertainty/)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.15429-b31b1b.svg)](https://arxiv.org/abs/2506.09669)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is the repo for our ongoing work "Query-Level Uncertainty in Large Language Models". Feel free to contact us if We missed any relevant papers or if you would like to provide feedback. 
 
