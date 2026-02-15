@@ -117,6 +117,17 @@ Qwen/Qwen2.5-14B-Instruct
 
 Note that the AUROC and ECE should be exactly the same, as reported in the Table, but there are some small fluctuations of PRR as it compares to a random baseline and this process introduces the randomness.
 
+### Figure 6 (a)
+
+```python
+python run_rag.py
+````
+After, there will be a figure file in the same folder. Note that the optimal point might be changed due to the reproduction, but the overall trend is similar. 
+
+In line 180, you can see `#confidence = random.random()`, which means using a random score to guide this rag process. 
+This random score does show the same pattern as our internal confidence and the plateau disappears.
+
+
 
 ## Adaptive Inference
 In terms of applications, we showcase that our proposed method can help efficient RAG and model cascading. 
