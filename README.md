@@ -125,7 +125,7 @@ python run_rag.py
 After, there will be a figure file in the same folder. Note that the optimal point might be changed due to the reproduction, but the overall trend is similar. 
 
 In line 180, you can see `#confidence = random.random()`, which means using a random score to guide this rag process. 
-This random score does show the same pattern as our internal confidence and the plateau disappears.
+This random score does not show the same pattern as our internal confidence and the plateau disappears.
 
 
 
