@@ -62,7 +62,7 @@ def compute_ece(y_true, y_prob, n_bins=10):
     return result.item()
 
 
-def compare_calibration(model_name, dataset_name, start=6, dev_sample=1000, w=0.2):
+def compare_method(model_name, dataset_name, start=6, dev_sample=1000, w=0.2):
     label_file_name = f"label/updated_{dataset_name}_{model_name}.json"
     dataset = load_dataset(
         "Lihuchen/query-level-uncertainty",
@@ -179,7 +179,7 @@ def run(model_name, w=1.0, dev_sample=1000):
         print("+"*50)
         print(f"Model: {model}, Dataset: {dataset}")
         print("+"*50)
-        _top, _avg, _decay = compare_calibration(model_name, dataset, start, dev_sample=dev_num, w=w)
+        _top, _avg, _decay = compare_method(model_name, dataset, start, dev_sample=dev_num, w=w)
 
         if model not in top_results_by_model:top_results_by_model[model] = list()
         top_results_by_model[model].extend(_top)

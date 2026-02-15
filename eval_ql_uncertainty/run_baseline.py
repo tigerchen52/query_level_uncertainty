@@ -53,7 +53,7 @@ dataset_names = {
 
 
 
-def compare_calibration(model_name, dataset_name, estimator_name, dev_sample=1000):
+def compare_method(model_name, dataset_name, estimator_name, dev_sample=1000):
     
     confidence_scores, labels = [], []
     model_name = model_name.split('/')[-1].lower()
@@ -93,7 +93,7 @@ results = collections.OrderedDict()
 combinations = list(itertools.product(conf_methods.keys(), model_names.keys(), dataset_names.keys()))
 for conf_method, model_name, dataset_name in combinations:
     print(conf_method, model_name, dataset_name)
-    auc_score, prr, ece = compare_calibration(model_name, dataset_name, conf_method, dev_sample=dataset_names[dataset_name])
+    auc_score, prr, ece = compare_method(model_name, dataset_name, conf_method, dev_sample=dataset_names[dataset_name])
     
     if model_name not in results:results[model_name] = collections.OrderedDict()
     if conf_method not in results[model_name]: results[model_name][conf_method] = list()
