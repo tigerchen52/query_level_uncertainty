@@ -80,7 +80,7 @@ score = ql_uncertainty.estimate(query, examples)
 print(f"[internal_confidence with examples] score = {score}")
 ```
 
-## Reproduction!!
+## Reproduction
 `eval_ql_uncertainty` folder includes the code for reproducing the key results in our paper
 
 ### Table 1
