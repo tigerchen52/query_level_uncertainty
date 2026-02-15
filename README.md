@@ -80,6 +80,43 @@ score = ql_uncertainty.estimate(query, examples)
 print(f"[internal_confidence with examples] score = {score}")
 ```
 
+## Reproduction!!
+`eval_ql_uncertainty` folder includes the code for reproducing the key results in our paper
+
+### Table 1
+
+```python
+python run_baseline.py
+```
+expected output example
+
+```
+microsoft/Phi-3-mini-4k-instruct max_prob
+55.5&11.0&----&51.4&3.1&----&55.0&6.4&----&54.0&6.8&----\cr
+microsoft/Phi-3-mini-4k-instruct pd_entropy
+58.9&18.9&----&51.2&2.3&----&63.6&25.7&----&57.9&15.6&----\cr
+```
+Each line corresponds to a row in Table 1, indicating the performance of a particular baseline
+
+```python
+python run_ic.py --model_name Qwen/Qwen2.5-14B-Instruct
+```
+expected output example
+
+```
++++++++++++++P(YES) TOP RIGHT+++++++++++++
+Qwen/Qwen2.5-14B-Instruct
+67.8&35.9&30.3&60.0&20.5&24.1&55.0&8.4&6.4&60.9&21.6&20.3\cr
++++++++++++++P(YES) NAIVE AVG+++++++++++++
+Qwen/Qwen2.5-14B-Instruct
+67.0&33.2&3.5&59.5&19.3&14.6&64.0&27.5&32.4&63.5&26.7&16.8\cr
++++++++++++++INTERNAL CONFIDENCE+++++++++++++
+Qwen/Qwen2.5-14B-Instruct
+71.9&44.8&26.5&62.6&24.6&18.2&66.8&34.6&5.7&67.1&34.7&16.8\cr
+```
+
+Note that the AUROC and ECE should be exactly the same, as reported in the Table, but there are some small fluctuations of PRR as it compares to a random baseline and this process introduces the randomness.
+
 
 ## Adaptive Inference
 In terms of applications, we showcase that our proposed method can help efficient RAG and model cascading. 
