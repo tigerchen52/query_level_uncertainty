@@ -106,9 +106,10 @@ class InternalConfidence():
         return aggregared_score
     
     
-    def estimate(self, query):
+    def estimate(self, query, last_k_token):
         query_results = self.calulate_p_yes(query)
         confidence_scores = query_results['query_probs']
+        confidence_scores = confidence_scores[-last_k_token:]
         score = self.aggreagate(confidence_scores)
 
         return score

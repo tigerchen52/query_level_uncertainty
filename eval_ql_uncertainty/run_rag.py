@@ -177,7 +177,7 @@ def rag(sample_num=10000):
             confidence = scores[i]
             
             # use a random score
-            #confidence = random.random()
+            confidence = random.random()
             
             if confidence > alpha:
                 predicted.append(labels[i])

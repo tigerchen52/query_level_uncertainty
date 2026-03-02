@@ -151,8 +151,8 @@ def compare_method(model_name, dataset_name, start=6, dev_sample=1000, w=0.2):
 
 
 def run(model_name, w=1.0, dev_sample=1000):
-    # we consider the last k tokens of a query, assuming that a model has seen the entire query and is able
-    # to infer its knowledge gap. the start index is the last token of the query.
+    # we consider the last k tokens of an input prompt, assuming that a model has seen the entire query and is able
+    # to infer its knowledge gap. For instruction-aligned models, the system tokens after the query are regarded as the last k tokens.
     # Note that we can add suffix tokens for goal, e.g. {query}? your answer is;  {query}? please provide your confidence score
     model_names = {
         'microsoft/Phi-3-mini-4k-instruct': 3,

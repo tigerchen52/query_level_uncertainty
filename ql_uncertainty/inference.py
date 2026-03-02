@@ -37,7 +37,7 @@ class QLUncertainty:
             raise ValueError("`target_tokens` must be provided when method is 'internal_confidence'")
 
     def estimate(
-        self, query: str, examples: Optional[List[Any]] = None
+        self, query: str, last_k_token: int=6, examples: Optional[List[Any]] = None
     ) -> float:
         """
         Estimate a confidence / uncertainty score for the given query.
@@ -62,7 +62,7 @@ class QLUncertainty:
                 prompt, tokenize=False, add_generation_prompt=True
             )
 
-            score = ic.estimate(prompt)
+            score = ic.estimate(prompt, last_k_token)
             return score
 
         else:
