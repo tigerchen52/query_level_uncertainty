@@ -148,3 +148,19 @@ On the one hand, internal confidence can guide users to assess the trade-offs be
 ## Citation
 If you find our work useful, give us a star or citation. Thank you!
 
+```
+Chen, L., de Melo, G., Suchanek, F., & Varoquaux, G. (2026). Query-Level Uncertainty in Large Language Models.
+International Conference on Learning Representations (ICLR 2026), pp. 34353–34372.
+```
+
+```
+@inproceedings{ChenDeMeloSuchanekVaroquaux2026QueryLevelUncertainty,
+  title = {Query-Level Uncertainty in Large Language Models},
+  author = {Chen, Lihu  and  {de Melo}, Gerard  and  Suchanek, Fabian  and  Varoquaux, Gael},
+  booktitle = {International Conference on Learning Representations (ICLR 2026)},
+  editor = {C. Vondrick and B. Hariharan and C. Raffel and L. Pinto and D. Yang and A. Faust},
+  pages = {34353--34372},
+  year = {2026},
+  url = {https://proceedings.iclr.cc/paper_files/paper/2026/file/3a07c3a67cfe50d3236b71fb674c7f30-Paper-Conference.pdf}
+}
+```
